@@ -1,7 +1,7 @@
 #! /bin/bash
 
 if [ ! -f /opt/craftopia/ServerSetting.ini ]; then
-  steamcmd +login anonymous +force_install_dir /opt/craftopia +app_update 1670340 +quit
+  steamcmd +force_install_dir /opt/craftopia +login anonymous +app_update 1670340 +quit
 
   cp /opt/ServerSetting.ini /opt/craftopia/ServerSetting.ini
   sed -i "s/name=NoName/name=$WORLD_NAME/g" /opt/ServerSetting.ini
@@ -16,7 +16,7 @@ if [ ! -f /opt/craftopia/ServerSetting.ini ]; then
 fi
 
 if [ "$FORCE_UPDATE" == "true" ]; then
-  steamcmd +login anonymous +force_install_dir /opt/craftopia +app_update 1670340 +quit
+  steamcmd +force_install_dir /opt/craftopia +login anonymous +app_update 1670340 +quit
 fi
 
 cd /opt/craftopia
