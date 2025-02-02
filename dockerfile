@@ -1,5 +1,7 @@
 FROM steamcmd/steamcmd:latest
 
+LABEL version="v1.0.0"
+
 VOLUME [ "/opt/craftopia" ]
 
 COPY [ "ServerSetting.ini", "startupScript.sh", "/opt/" ]
