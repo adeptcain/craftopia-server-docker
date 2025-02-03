@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 
 if [ ! -f /opt/craftopia/ServerSetting.ini ]; then
   steamcmd +force_install_dir /opt/craftopia +login anonymous +app_update 1670340 +quit
