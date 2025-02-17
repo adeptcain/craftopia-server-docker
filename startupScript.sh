@@ -15,7 +15,7 @@ if [ ! -f /opt/craftopia/ServerSetting.ini ]; then
   sed -i "s/autoSavePerHour=1/autoSavePerHour=$SAVE_AUTO_SAVE_PER_HOUR/g" /opt/ServerSetting.ini
 fi
 
-if [ "$FORCE_UPDATE" == "true" ]; then
+if [ "$FORCE_UPDATE" -eq "true" ]; then
   steamcmd +force_install_dir /opt/craftopia +login anonymous +app_update 1670340 +quit
 fi
 
